@@ -1,0 +1,68 @@
+@import "../node_modules/rfs/scss";
+
+
+
+$primary: #444C9A;
+$secondary: #E84C37;
+
+.primary {
+    color: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+
+
+/*-----Typography-----*/
+
+$font-size-sm: 1rem;
+$font-size-basis: 1.2rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 3.8rem;
+
+$line-height: 1.5;
+$chperline: 70ch;
+$smaller-text: 80%;
+$bigger-text: 120%;
+
+
+
+%font-sm {
+  @include font-size($font-size-sm);
+}
+
+%font-reg {
+  @include font-size($font-size-basis);
+}
+
+%font-lg {
+  @include font-size($font-size-lg);
+}
+
+p {
+  @extend %font-reg;
+}
+
+h1 {
+  @include font-size($font-size-xl)
+}
+
+h2 {
+  @include font-size($font-size-lg);
+  font-weight: 300;
+}
+
+h3 {
+  @include font-size($font-size-basis);
+}
+
+/*-----Paddings & Gap-----*/
+
+$reg-space: 2rem;
+$sm-space: calc($reg-space / 2);
+$xs-space: calc($sm-space / 2);
+$xxs-space: calc($xs-space / 2);
+$lg-space: calc($reg-space * 2);
+$padding-btn: $sm-space $reg-space;

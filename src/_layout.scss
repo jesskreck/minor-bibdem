@@ -1,0 +1,40 @@
+@use "variables" as *;
+@import "../node_modules/rfs/scss";
+
+.body {
+    @include margin($lg-space);
+
+    h1 {
+        @include margin-top($lg-space);
+    }
+
+    h1,
+    h2 {
+        @include margin-bottom($reg-space);
+    }
+}
+
+.projekt {
+    p {
+        @extend %font-sm;
+        @include margin(4rem 10rem);
+    }
+}
+
+.img-carousel {
+    &--2 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        
+    }
+}
+
+.förderung {
+    p {
+        @include padding-bottom($reg-space)
+    }
+    img {
+        width: fit-content
+    }
+}

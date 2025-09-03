@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+button {
+    @include padding($padding-btn);
+    @include margin-top($reg-space);
+    @extend %font-sm;
+
+    background-color: $secondary;
+    border-radius: 6px;
+    color: white;
+
+}

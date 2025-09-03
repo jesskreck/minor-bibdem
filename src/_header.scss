@@ -1,0 +1,72 @@
+@use "variables" as *;
+
+
+header {
+    nav {
+        @include padding($reg-space);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+
+        color: black;
+        transition: color 0.3s;
+
+        &.dark {
+            color: white;
+        }
+
+        p {
+            @extend %font-sm;
+            align-self: center;
+        }
+
+        .nav-btns {
+            
+            display: flex;
+            justify-content: space-between;
+            gap: $reg-space;
+
+            button {
+                background-color: transparent;
+                @extend %font-sm;
+                margin: 0;
+                padding: 0;
+                color: inherit;
+            }
+
+            :last-child {
+                @include padding($sm-space);
+                border: 1px solid currentColor;
+                border-radius: 9px;
+
+
+            }
+        }
+    }
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover !important;
+    background:
+        linear-gradient(
+            to bottom, 
+            rgba(0, 0, 0, 0.35) 0%,  
+            rgba(0, 0, 0, 0.1) 100%),
+        url(/src/lib/assets/BibDem_Titelbild_no-text.png) no-repeat center center scroll;
+
+        h1, h2 {
+            color: white;
+            @include padding($reg-space);
+        }
+}
