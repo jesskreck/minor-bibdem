@@ -2,14 +2,17 @@
 @import "../node_modules/rfs/scss";
 
 .body {
-    @include margin($lg-space);
+    @include padding($lg-space);
+    max-width: 1400px;
+    margin: 0 auto;
 
     h1 {
-        @include margin-top($lg-space);
+        @include margin-top($xl-space);
     }
 
     h1,
-    h2 {
+    h2,
+    h3 {
         @include margin-bottom($reg-space);
     }
 }
@@ -21,20 +24,56 @@
     }
 }
 
+.förderung {
+    p {
+        @include padding-bottom($reg-space);
+    }
+    img {
+        width: fit-content;
+    }
+}
+
 .img-carousel {
     &--2 {
         display: grid;
         grid-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        
     }
 }
 
-.förderung {
-    p {
-        @include padding-bottom($reg-space)
-    }
+.grid-einheiten {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $reg-space;
+    @include margin-bottom($lg-space);
+
     img {
-        width: fit-content
+        border-radius: $border-radius;
     }
+
+    & div:last-child {
+        align-self: center;
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+
+        &:nth-child(even) {
+            > :first-child {
+                order: 2;
+            }
+            > :last-child {
+                order: 1;
+            }
+        }
+    }
+}
+
+.modal {
+    align-self: center;
+    margin: 0 auto;
+    border-radius: $border-radius;
+    @include padding($reg-space);
+    border: lightgray 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

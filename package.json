@@ -20,6 +20,7 @@
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@vitest/browser": "^3.2.3",
+		"daisyui": "^5.1.6",
 		"playwright": "^1.53.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-svelte": "^3.3.3",
@@ -31,8 +32,10 @@
 		"vitest-browser-svelte": "^0.1.0"
 	},
 	"dependencies": {
+		"@tailwindcss/vite": "^4.1.12",
 		"rfs": "^10.0.0",
 		"sass": "^1.91.0",
-		"sass-embedded": "^1.92.0"
+		"sass-embedded": "^1.92.0",
+		"tailwindcss": "^4.1.12"
 	}
 }

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
+	// import "../daisyui.css";
 	import "../index.css";
 
 	let { children } = $props();
